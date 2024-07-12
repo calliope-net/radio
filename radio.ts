@@ -14,7 +14,7 @@ enum RadioPacketProperty {
 /**
  * Communicate data using radio packets
  */
-//% color=#E3008C weight=96 icon="\uf012"
+//% color=#E3008C weight=96 icon="\uf012" block="Fernsteuerung"
 namespace radio {
 
     // keep in sync with CODAL
