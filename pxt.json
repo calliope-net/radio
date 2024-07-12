@@ -23,7 +23,7 @@
     "supportedTargets": [
         "calliopemini"
     ],
-    "preferredEditor": "tsprj",
+    "preferredEditor": "blocksprj",
     "icon": "https://pxt.azureedge.net/blob/34121c53a92e1ab1a20a6facaf277c63c80c0955/static/packages/radio/icon.png",
     "yotta": {
         "config": {

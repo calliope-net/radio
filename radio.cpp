@@ -45,7 +45,7 @@ using namespace pxt;
 #endif
 
 //% color=#E3008C weight=96 icon="\uf012"
-namespace radio {
+namespace radio4 {
     
 #if CODAL_RADIO_MICROBIT_DAL
     CODAL_RADIO* getRadio() {

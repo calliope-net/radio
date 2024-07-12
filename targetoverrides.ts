@@ -1,4 +1,4 @@
-namespace radio {
+namespace radio4 {
     export class Packet {
         /**
          * The number payload if a number was sent in this packet (via ``sendNumber()`` or ``sendValue()``)
@@ -194,7 +194,7 @@ namespace radio {
     //% blockId=radio_write_value_serial block="radio write value to serial"
     //% deprecated=true
     export function writeValueToSerial() {
-        const p = RadioPacket.getPacket(radio.readRawPacket());
+        const p = RadioPacket.getPacket(radio4.readRawPacket());
         if (p)
             writeToSerial(p);
     }

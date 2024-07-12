@@ -15,7 +15,7 @@ enum RadioPacketProperty {
  * Communicate data using radio packets
  */
 //% color=#E3008C weight=96 icon="\uf012" block="Fernsteuerung"
-namespace radio {
+namespace radio4 {
 
     // keep in sync with CODAL
     const RADIO_MAX_PACKET_SIZE = 32;
@@ -353,7 +353,7 @@ namespace radio {
     function sendPacket(packet: RadioPacket) {
         packet.time = control.millis();
         packet.serial = transmittingSerial ? control.deviceSerialNumber() : 0;
-        radio.sendRawPacket(packet.data);
+        radio4.sendRawPacket(packet.data);
     }
 
     function truncateString(str: string, bytes: number) {

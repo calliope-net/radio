@@ -3,7 +3,7 @@
 
 
     //% color=#E3008C weight=96 icon="\uf012"
-declare namespace radio {
+declare namespace radio4 {
 
     /**
      * Sends an event over radio to neigboring devices
@@ -12,20 +12,20 @@ declare namespace radio {
     //% blockExternalInputs=1
     //% advanced=true
     //% weight=1
-    //% help=radio/raise-event shim=radio::raiseEvent
+    //% help=radio/raise-event shim=radio4::raiseEvent
     function raiseEvent(src: int32, value: int32): void;
 
     /**
      * Internal use only. Takes the next packet from the radio queue and returns its contents + RSSI in a Buffer.
      * @returns NULL if no packet available
      */
-    //% shim=radio::readRawPacket
+    //% shim=radio4::readRawPacket
     function readRawPacket(): Buffer;
 
     /**
      * Internal use only. Sends a raw packet through the radio (assumes RSSI appened to packet)
      */
-    //% async shim=radio::sendRawPacket
+    //% async shim=radio4::sendRawPacket
     function sendRawPacket(msg: Buffer): void;
 
     /**
@@ -34,7 +34,7 @@ declare namespace radio {
     //% help=radio/on-data-received
     //% weight=0
     //% blockId=radio_datagram_received_event block="radio on data received" blockGap=8
-    //% deprecated=true blockHidden=1 shim=radio::onDataReceived
+    //% deprecated=true blockHidden=1 shim=radio4::onDataReceived
     function onDataReceived(body: () => void): void;
 
     /**
@@ -44,7 +44,7 @@ declare namespace radio {
     //% help=radio/set-group
     //% weight=100
     //% blockId=radio_set_group block="radio set group %ID"
-    //% id.min=0 id.max=255 shim=radio::setGroup
+    //% id.min=0 id.max=255 shim=radio4::setGroup
     function setGroup(id: int32): void;
 
     /**
@@ -55,7 +55,7 @@ declare namespace radio {
     //% weight=9 blockGap=8
     //% blockId=radio_set_transmit_power block="radio set transmit power %power"
     //% power.min=0 power.max=7
-    //% advanced=true shim=radio::setTransmitPower
+    //% advanced=true shim=radio4::setTransmitPower
     function setTransmitPower(power: int32): void;
 
     /**
@@ -66,7 +66,7 @@ declare namespace radio {
     //% weight=8 blockGap=8
     //% blockId=radio_set_frequency_band block="radio set frequency band %band"
     //% band.min=0 band.max=83
-    //% advanced=true shim=radio::setFrequencyBand
+    //% advanced=true shim=radio4::setFrequencyBand
     function setFrequencyBand(band: int32): void;
 }
 
