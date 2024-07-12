@@ -5,11 +5,10 @@
         "core": "*"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
         "README.md",
-        "enums.d.ts",
         "shims.d.ts",
+        "enums.d.ts",
+        "radio.cpp",
         "radio.ts"
     ],
     "testFiles": [
@@ -19,8 +18,14 @@
         "target": "4.0.29",
         "targetId": "calliopemini"
     },
-    "supportedTargets": [
-        "calliopemini"
-    ],
-    "preferredEditor": "tsprj"
+     "icon": "https://pxt.azureedge.net/blob/34121c53a92e1ab1a20a6facaf277c63c80c0955/static/packages/radio/icon.png",
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 0
+                }
+            }
+        }
+    }
 }
